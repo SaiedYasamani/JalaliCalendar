@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.core.widget.NestedScrollView
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    tools:context=".MainActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/date"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="6dp"
+            android:textAlignment="center"
+            android:textColor="@color/colorPrimary"
+            android:text="نام ماه"/>
+
+        <LinearLayout
+            android:id="@+id/daysList"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorPrimary"
+            android:layoutDirection="rtl"
+            android:orientation="horizontal"
+            android:paddingTop="3dp"
+            android:paddingBottom="3dp"
+            android:weightSum="7"
+            android:layout_below="@+id/date">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@color/colorPrimary"
+                android:text="ش"
+                android:textAlignment="center"
+                android:textColor="#ffffff"
+                android:textSize="14sp" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@color/colorPrimary"
+                android:text="ی"
+                android:textAlignment="center"
+                android:textColor="#ffffff"
+                android:textSize="14sp" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@color/colorPrimary"
+                android:text="د"
+                android:textAlignment="center"
+                android:textColor="#ffffff"
+                android:textSize="14sp" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@color/colorPrimary"
+                android:text="س"
+                android:textAlignment="center"
+                android:textColor="#ffffff"
+                android:textSize="14sp" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@color/colorPrimary"
+                android:text="چ"
+                android:textAlignment="center"
+                android:textColor="#ffffff"
+                android:textSize="14sp" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@color/colorPrimary"
+                android:text="پ"
+                android:textAlignment="center"
+                android:textColor="#ffffff"
+                android:textSize="14sp" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@color/colorPrimary"
+                android:text="ج"
+                android:textAlignment="center"
+                android:textColor="#ffffff"
+                android:textSize="14sp" />
+
+        </LinearLayout>
+
+        <GridView
+            android:id="@+id/grid"
+            android:layout_width="wrap_content"
+            android:layout_height="450dp"
+            android:layout_below="@+id/daysList"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            android:layoutDirection="rtl"
+            android:numColumns="7"
+            android:paddingTop="3dp"
+            android:paddingBottom="3dp"/>
+
+        <Button
+            android:id="@+id/next"
+            android:layout_width="100dp"
+            android:layout_height="50dp"
+            android:layout_margin="3dp"
+            android:layout_alignParentLeft="true"
+            android:layout_below="@id/grid"
+            android:text="بعدی"/>
+
+        <Button
+            android:id="@+id/previous"
+            android:layout_width="100dp"
+            android:layout_height="50dp"
+            android:layout_margin="3dp"
+            android:layout_alignParentRight="true"
+            android:layout_below="@id/grid"
+            android:text="قبلی"/>
+
+    </RelativeLayout>
+
+</androidx.core.widget.NestedScrollView>
